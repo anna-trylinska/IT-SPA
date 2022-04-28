@@ -1,0 +1,146 @@
+
+html,
+body {
+    height : 100%;
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    background : linear-gradient(lightgrey) no-repeat fixed;
+    font-family: Helvetica;
+    font-weight: 200;
+    padding    : 2rem;
+}
+
+
+
+nav {
+
+    button,
+    .btn {
+        background   : transparent;
+        color: white;
+        border       : 0;
+        border-radius: 0;
+        box-shadow   : none !important;
+        font-size    : 1rem;
+        outline      : none;
+        padding      : 0.5rem 1rem;
+        font-weight: 100;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: transparent;
+            color: lightgrey;
+        }
+    }
+
+    // .btn.btn-active {
+    //     background-color: #f4b700;
+    //     text-decoration : underline;
+    // }
+}
+
+main {
+
+    padding: 20px 20px 20px 20px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 2rem 0;
+    }
+
+    p {
+        margin: 1rem 0;
+            // .bottom {
+            //     margin: 30px, 30px;
+            // }
+    }
+
+    ul {
+        list-style: none;
+        padding   : 0;
+
+        li {
+            background-color: #1791b3;
+            box-shadow      : #00576e 0 2px 8px 2px;
+            color           : #fff;
+            padding         : 1rem;
+
+            footer {
+                display        : flex;
+                align-items    : center;
+                justify-content: flex-end;
+                
+
+                &>*+* {
+                    margin-left: 1rem;
+                }
+
+            }
+
+            button,
+            .btn {
+                background: transparent;
+                border    : 1px solid #fff;
+                color     : #fff;
+            }
+        }
+
+        li+li {
+            margin-top: 2rem;
+        }
+    }
+
+
+    article {
+        $bg-color-1: #fffcf2;
+        $bg-color-2: #fff6dd;
+
+        background: repeating-linear-gradient(45deg, $bg-color-1, $bg-color-1 10px, $bg-color-2 10px, $bg-color-2 20px);
+        box-shadow: #00576e 0 2px 8px 2px;
+        margin    : 2em 1em;
+        padding   : 1rem;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            background: #ddc47d;
+            color     : white;
+            margin    : 0;
+            padding   : 1rem 0.5rem;
+        }
+    }
+}
+
+
+.it-spa {
+    text-align: center;
+}
+
+.header-main {
+    font-size: 60px;
+}
+
+.fixed-bottom {
+    color:white;
+    text-align: center;
+    height: 30px;
+    justify-content: center;
+}
+
+.container {
+    margin: 12px;
+    .row {
+        margin: 12px;
+    }
+}
