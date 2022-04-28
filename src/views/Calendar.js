@@ -1,5 +1,5 @@
 
-export function Reservation() {
+export function Calendar() {
     const section = document.createElement("section")
 
     let today = new Date();
@@ -27,11 +27,11 @@ export function Reservation() {
 
     section.innerHTML = `
     <div class='row'>
-        <div class='col d-flex justify-content-center align-items-center'>
+        <div class='col-6 d-flex justify-content-center align-items-center'>
             <label for="dateOfArrival">Data przyjazdu:</label>
             <input type="date" id="dateOfArrival" class="datefield" min="${today}"; max="${nextYear}">
         </div>
-        <div class='col d-flex justify-content-center align-items-center'>
+        <div class='col-6 d-flex justify-content-center align-items-center'>
             <label for="dateOfDeparture">Data wyjazdu:</label>
             <input type="date" id="dateOfDeparture" class="datefield" min="${today}"; max="${nextYear}">
         </div>

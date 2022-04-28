@@ -13,10 +13,10 @@ const navigateTo = (component) => {
 };
 
 const navItems = [
-    {text: 'Home', component: Home },
-    {text: 'Rooms', component: Rooms },
-    {text: 'Treatments', component: Treatments },
-    {text: 'Cart', component: Cart}
+    {text: 'Strona główna', component: Home },
+    {text: 'Pokoje', component: Rooms },
+    {text: 'Zabiegi', component: Treatments },
+    {text: 'Koszyk', component: Cart}
 ];
 
 export function Nav() {

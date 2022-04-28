@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background : linear-gradient(lightgrey) no-repeat fixed;
+    background : linear-gradient(45deg #FBFBFB lightgrey) no-repeat fixed;
     font-family: Helvetica;
     font-weight: 200;
     padding    : 2rem;
@@ -132,7 +132,7 @@ main {
 }
 
 .fixed-bottom {
-    color:white;
+    color:#FBFBFB;
     text-align: center;
     height: 30px;
     justify-content: center;
@@ -142,5 +142,24 @@ main {
     margin: 12px;
     .row {
         margin: 12px;
+    }
+}
+
+.top-header {
+    height: 80px;
+    width: auto;
+}
+
+
+.bgcolor {
+    background-color: black;
+    border: black solid 1px;
+}
+.greeting {
+    background-color: #FBFBFB;
+    transition: 2s ease-in-out;
+    &:hover {
+        background-color: black;
+        color: #FBFBFB;
     }
 }
