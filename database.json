@@ -6,79 +6,98 @@
       "name": "Pokój unarny",
       "beds": 1,
       "guests": 1,
-      "price": 170
+      "price": 170,
+      "opinion": "★★★★☆"
     },
     {
       "id": 2,
       "name": "Pokój binarny",
       "beds": 1,
       "guests": 2,
-      "price": 240
+      "price": 240,
+      "opinion": "★★★★★"
     },
     {
       "id": 3,
       "name": "Pokój trójkowy",
       "beds": 2,
       "guests": 3,
-      "price": 290
+      "price": 290,
+      "opinion": "★★★☆☆"
     },
     {
       "id": 4,
       "name": "Pokój czwórkowy",
       "beds": 2,
       "guests": 4,
-      "price": 340
+      "price": 340,
+      "opinion": "★★★★☆"
     }
   ],
   "treatments": [
     {
       "id": 5,
-      "name": "Masaż rozgrzanym monitorem",
+      "name": "Masaż rozgrzanymi kamieniami",
       "area": "plecy",
       "time": 30,
-      "price": 80
+      "price": 80,
+      "opinion": "★★★★☆"
     },
     {
       "id": 6,
-      "name": "Biczowanie kablem od myszy",
+      "name": "Biczowanie strumieniami wodnymi",
       "area": "plecy",
       "time": 20,
-      "price": 70
+      "price": 70,
+      "opinion": "★★★★☆"
     },
     {
       "id": 7,
-      "name": "Peeling odłamkami płyty CD",
+      "name": "Peeling czekoladowy",
       "area": "twarz",
       "time": 15,
-      "price": 50
+      "price": 50,
+      "opinion": "★★★★★"
     },
     {
       "id": 8,
-      "name": "Pedicure woskiem z USB",
-      "area": "stopy",
-      "time": 25,
-      "price": 100
+      "name": "Maseczka Espresso",
+      "area": "twarz",
+      "time": 15,
+      "price": 50,
+      "opinion": "★★★★★"
     },
     {
       "id": 9,
-      "name": "Manicure analogowo-cyfrowy",
-      "area": "dłonie",
-      "time": 45,
-      "price": 150
+      "name": "Pedicure tradycyjny",
+      "area": "stopy",
+      "time": 25,
+      "price": 100,
+      "opinion": "★★★★☆"
     },
     {
       "id": 10,
-      "name": "Kąpiel w gorącej kawie",
-      "area": "całe ciało",
-      "time": 60,
-      "price": 200
+      "name": "Manicure tradycyjny",
+      "area": "dłonie",
+      "time": 45,
+      "price": 150,
+      "opinion": "★★★★★"
     },
     {
       "id": 11,
-      "name": "Depilacja dyskiem twardym",
+      "name": "Kąpiel w gorącej kawie",
       "area": "całe ciało",
-      "time": 45,
-      "price": 120
+      "time": 60,
+      "price": 200,
+      "opinion": "★★★★★"
+    },
+    {
+      "id": 12,
+      "name": "Depilacja laserowa",
+      "area": "całe ciało",
+      "time": 120,
+      "price": 120,
+      "opinion": "★★★☆☆"
     }
   ]
 }

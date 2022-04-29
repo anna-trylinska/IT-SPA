@@ -1,45 +1,43 @@
-const key = 'spa_cart';
+const key = "spa_cart";
 
 export const cartManager = {
+  addItem: (item) => {
+    const cart = localStorage.getItem(key);
 
-    addItem: (item) => {
-        const cart = localStorage.getItem(key);
+    if (cart === null) {
+      const serializedItem = JSON.stringify([item]);
+      localStorage.setItem(key, serializedItem);
+    } else {
+      const parsedCart = JSON.parse(cart);
+      parsedCart.push(item);
 
-        if (cart === null) {
-            const serializedItem = JSON.stringify( [item] );
-            localStorage.setItem(key, serializedItem);
-        } else {
-            const parsedCart = JSON.parse(cart);
-            parsedCart.push(item);
-
-            const serializedCart = JSON.stringify(parsedCart);
-            localStorage.setItem(key, serializedCart);
-        }
-    },
-
-    removeItem: (item) => {
-        const cart = localStorage.getItem(key);
-
-        if (cart !== null) {
-            const parsedCart = JSON.parse(cart);
-
-            const filteredItems = parsedCart.filter(cartItem => {
-                return cartItem.id !== item.id;
-            });
-
-            const serializedItems = JSON.stringify(filteredItems);
-            localStorage.setItem(key, serializedItems);
-        }
-    },
-
-    getAllItems: () => {
-        const cart = localStorage.getItem(key);
-
-        if (cart === null) {
-            return [];
-        } else {
-            return JSON.parse(cart);
-        }
+      const serializedCart = JSON.stringify(parsedCart);
+      localStorage.setItem(key, serializedCart);
     }
+  },
 
+  removeItem: (item) => {
+    const cart = localStorage.getItem(key);
+
+    if (cart !== null) {
+      const parsedCart = JSON.parse(cart);
+
+      const filteredItems = parsedCart.filter((cartItem) => {
+        return cartItem.id !== item.id;
+      });
+
+      const serializedItems = JSON.stringify(filteredItems);
+      localStorage.setItem(key, serializedItems);
+    }
+  },
+
+  getAllItems: () => {
+    const cart = localStorage.getItem(key);
+
+    if (cart === null) {
+      return [];
+    } else {
+      return JSON.parse(cart);
+    }
+  },
 };

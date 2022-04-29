@@ -4,6 +4,7 @@ body {
     height : 100%;
     margin : 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,16 +12,22 @@ body {
     font-family: Helvetica;
     font-weight: 200;
     padding    : 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 
 
 nav {
 
+    display: flex;
+    justify-content: center;
+    height: 3.75rem;
+
     button,
     .btn {
         background   : transparent;
-        color: white;
+        color: #FBFBFB;
         border       : 0;
         border-radius: 0;
         box-shadow   : none !important;
@@ -33,14 +40,13 @@ nav {
         &:focus,
         &:hover {
             background: transparent;
-            color: lightgrey;
+            color: #FBFBFB;
         }
     }
 
-    // .btn.btn-active {
-    //     background-color: #f4b700;
-    //     text-decoration : underline;
-    // }
+    .btn.btn-active {
+        text-decoration : underline;
+    }
 }
 
 main {
@@ -66,11 +72,12 @@ main {
     ul {
         list-style: none;
         padding   : 0;
+        width: 46.875rem;
 
         li {
             background-color: #1791b3;
-            box-shadow      : #00576e 0 2px 8px 2px;
-            color           : #fff;
+
+            color           : black;
             padding         : 1rem;
 
             footer {
@@ -98,7 +105,7 @@ main {
         }
     }
 
-
+}
     article {
         $bg-color-1: #fffcf2;
         $bg-color-2: #fff6dd;
@@ -120,7 +127,7 @@ main {
             padding   : 1rem 0.5rem;
         }
     }
-}
+
 
 
 .it-spa {
@@ -128,25 +135,24 @@ main {
 }
 
 .header-main {
-    font-size: 60px;
+    font-size: 3.125rem;
 }
 
 .fixed-bottom {
-    color:#FBFBFB;
     text-align: center;
-    height: 30px;
-    justify-content: center;
+    height: 1.875rem;
 }
 
 .container {
-    margin: 12px;
+    margin: 0.75rem;
+    padding: 0;
     .row {
-        margin: 12px;
+        margin: 0.75rem;
     }
 }
 
 .top-header {
-    height: 80px;
+    height: 3.75rem;
     width: auto;
 }
 
@@ -154,12 +160,62 @@ main {
 .bgcolor {
     background-color: black;
     border: black solid 1px;
+    margin: 0;
+    .greeting {
+        background-color: #FBFBFB;
+        transition: 2s ease-in-out;
+        &:hover {
+            background-color: black;
+            color: #FBFBFB;
+        }
+    }
 }
-.greeting {
-    background-color: #FBFBFB;
-    transition: 2s ease-in-out;
-    &:hover {
-        background-color: black;
-        color: #FBFBFB;
+
+.bg-black  {
+    background-color: black;
+    color: #FBFBFB;
+}
+
+.container {
+    .btn {
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+}
+
+
+@media all and (min-width: 320px) and (max-width: 576px) {
+    body {
+        font-size: 0.5rem;
+    .header-main {
+        font-size: 1.25rem;
+        }
+    .btn {
+        font-size: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+    nav {
+        height: 2.75rem;
+    }
+    .top-header {
+        height:auto;
+    }
+    }
+}
+
+@media all and (min-width: 576px) {
+    body {
+        font-size: 0.75rem;
+        font-weight: 100;
+    .header-main {
+        font-size: 1.5rem;
+        }
+    .btn {
+        font-size: 0.75rem;
+    }
+    .top-header {
+        height: 1.875rem;
+    }
     }
 }
