@@ -41,7 +41,7 @@ export function Rooms() {
           },
         });
 
-        li.firstElementChild.setAttribute('class', 'first')
+        li.firstElementChild.setAttribute("class", "first");
         li.lastElementChild.append(seeMoreButton, addToCartButton);
 
         return li;

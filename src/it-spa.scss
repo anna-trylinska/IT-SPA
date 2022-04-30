@@ -11,7 +11,7 @@ body {
     background-image: linear-gradient(45deg, #fdfbfb, #ebedee);
     font-family:  Montserrat, Helvetica, sans-serif;
     font-weight: 200;
-    padding    : 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     min-height: 100%;
@@ -26,18 +26,18 @@ nav {
 
     button,
     .btn {
-        background   : transparent;
+        background: transparent;
         color: #FBFBFB;
-        box-shadow   : none !important;
-        font-size    : 1rem;
-        outline      : none;
-        padding      : 0.5rem 1rem;
+        box-shadow: none !important;
+        font-size: 1rem;
+        outline: none;
+        padding: 0.5rem 1rem;
         font-weight: 100;
 
         &:focus,
         &:active,
         &:hover {
-            background-color: #FBFBFB;
+        background-image: linear-gradient(45deg, #fdfbfb, #ebedee);
             color: black;
         }
     }
@@ -176,6 +176,7 @@ main {
 
     border: black solid 0.063rem;
     margin: 0;
+    min-height: 50vh;
     .greeting {
         background: transparent;
         transition: 2s ease-in-out;
@@ -211,6 +212,14 @@ main {
 @media all and (min-width: 320px) and (max-width: 576px) {
     body {
         font-size: 0.5rem;
+
+        h2 {
+            font-size: 1rem;
+        }
+        h4 {
+            font-size: 0.625rem;
+        }
+
     .header-main {
         font-size: 1.25rem;
         }
@@ -225,7 +234,7 @@ main {
         height:auto;
     }
     .bgcolor {
-        height: 5rem;
+        min-height: 10rem;
     }
     }
 }
@@ -234,6 +243,14 @@ main {
     body {
         font-size: 0.75rem;
         font-weight: 100;
+
+        h2 {
+            font-size: 1.25rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        
     .header-main {
         font-size: 1.5rem;
         }
@@ -244,7 +261,7 @@ main {
         height: 1.875rem;
     }
     .bgcolor {
-        height: 10rem;
+        min-height: 15rem;
     }
     }
 }
@@ -253,8 +270,16 @@ main {
     body {
         font-size: 1rem;
         font-weight: 200;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1.125rem;
+        }
+    
     .header-main {
-        font-size: 1.5rem;
+        font-size: 1.875rem;
         }
     .btn {
         font-size: 1rem;
@@ -263,7 +288,26 @@ main {
         height: 1.875rem;
     }
     .bgcolor {
-        height: 15rem;
+        min-height: 50vh;
+    }
+    }
+}
+
+@media all and (min-width: 992px) {
+    body {
+        font-size: 1rem;
+        font-weight: 200;
+    .header-main {
+        font-size: 2rem;
+        }
+    .btn {
+        font-size: 1rem;
+    }
+    .top-header {
+        height: 1.875rem;
+    }
+    .bgcolor {
+        min-height: 50vh;
     }
     }
 }
@@ -273,16 +317,13 @@ main {
         font-size: 1rem;
         font-weight: 200;
     .header-main {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         }
     .btn {
         font-size: 1rem;
     }
     .top-header {
         height: 3.75rem;
-    }
-    .bgcolor {
-        height: 40rem;
     }
     }
 }

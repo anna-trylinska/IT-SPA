@@ -1,4 +1,3 @@
-
 export function TreatmentDetails(id) {
   const section = document.createElement("section");
 
@@ -23,7 +22,7 @@ export function TreatmentDetails(id) {
                 <footer></footer>
             `;
 
-          article.firstElementChild.setAttribute('class', 'first')
+      article.firstElementChild.setAttribute("class", "first");
 
       section.querySelector("p").remove();
       section.append(article);

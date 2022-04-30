@@ -22,7 +22,7 @@ export function RoomDetails(id) {
                 <footer></footer>
             `;
 
-        article.firstElementChild.setAttribute('class', 'first')
+      article.firstElementChild.setAttribute("class", "first");
 
       section.querySelector("p").remove();
       section.append(article);
