@@ -35,10 +35,10 @@ export function Calendar() {
         </div>
     </div>
     `;
-  section.setAttribute("class", "container");
+  section.setAttribute("class", "content");
 
   const RoomButton = Button({
-    text: "Zobacz nasze dostępne pokoje",
+    text: "Zobacz dostępne pokoje",
     callback: () => {
       const navigateEvent = new CustomEvent("navigate", {
         detail: () => Rooms(),
@@ -49,7 +49,7 @@ export function Calendar() {
   });
 
   const TreatmentButton = Button({
-    text: "Zobacz nasze dostępne zabiegi",
+    text: "Zobacz dostępne zabiegi",
     callback: () => {
       const navigateEvent = new CustomEvent("navigate", {
         detail: () => Treatments(),

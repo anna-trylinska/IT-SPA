@@ -18,7 +18,8 @@ export function Rooms() {
         const li = document.createElement("li");
         li.innerHTML = `
                     <h4>${room.name}</h4>
-                    <p>${room.price.toFixed(2)} PLN</p>
+                    <p>Cena: ${room.price.toFixed(2)} PLN</p>
+                    <p>Ocena gości: ${room.opinion} </p>
                     <footer></footer>
                 `;
 
@@ -40,6 +41,7 @@ export function Rooms() {
           },
         });
 
+        li.firstElementChild.setAttribute('class', 'first')
         li.lastElementChild.append(seeMoreButton, addToCartButton);
 
         return li;

@@ -8,14 +8,14 @@ body {
 }
 
 body {
-    background : linear-gradient(45deg #FBFBFB lightgrey) no-repeat fixed;
-    font-family: Helvetica;
+    background-image: linear-gradient(45deg, #fdfbfb, #ebedee);
+    font-family:  Montserrat, Helvetica, sans-serif;
     font-weight: 200;
     padding    : 2rem;
     display: flex;
     justify-content: center;
+    min-height: 100%;
 }
-
 
 
 nav {
@@ -28,30 +28,27 @@ nav {
     .btn {
         background   : transparent;
         color: #FBFBFB;
-        border       : 0;
-        border-radius: 0;
         box-shadow   : none !important;
         font-size    : 1rem;
         outline      : none;
         padding      : 0.5rem 1rem;
         font-weight: 100;
 
-        &:active,
         &:focus,
+        &:active,
         &:hover {
-            background: transparent;
-            color: #FBFBFB;
+            background-color: #FBFBFB;
+            color: black;
         }
-    }
-
-    .btn.btn-active {
-        text-decoration : underline;
     }
 }
 
 main {
 
-    padding: 20px 20px 20px 20px;
+    width: auto;
+    height: auto;
+    padding: 1.25rem;
+    width: 100vw;
 
     h1,
     h2,
@@ -64,26 +61,38 @@ main {
 
     p {
         margin: 1rem 0;
-            // .bottom {
-            //     margin: 30px, 30px;
-            // }
+            .bottom {
+                margin: 1.5rem;
+            }
     }
 
     ul {
         list-style: none;
-        padding   : 0;
-        width: 46.875rem;
+        padding: 0;
+        width: auto;
 
         li {
-            background-color: #1791b3;
+            background: transparent;
+            color: black;
+            padding: 1rem;
+            border: black solid 0.063rem;
 
-            color           : black;
-            padding         : 1rem;
+            p {
+                padding: 0.625rem;
+            }
+
+            .first {
+                background-color: black;
+                padding: 0.625rem;
+                color: #FBFBFB
+            }
 
             footer {
-                display        : flex;
-                align-items    : center;
+                display: flex;
+                align-items: center;
                 justify-content: flex-end;
+                background-color: black;
+                padding: 0.313rem;
                 
 
                 &>*+* {
@@ -95,8 +104,11 @@ main {
             button,
             .btn {
                 background: transparent;
-                border    : 1px solid #fff;
-                color     : #fff;
+                color: #FBFBFB;
+                &:hover, :active {
+                    background-color: #FBFBFB;
+                    color: black;
+                }
             }
         }
 
@@ -107,13 +119,25 @@ main {
 
 }
     article {
-        $bg-color-1: #fffcf2;
-        $bg-color-2: #fff6dd;
 
-        background: repeating-linear-gradient(45deg, $bg-color-1, $bg-color-1 10px, $bg-color-2 10px, $bg-color-2 20px);
-        box-shadow: #00576e 0 2px 8px 2px;
-        margin    : 2em 1em;
-        padding   : 1rem;
+        border: black solid 0.063rem;
+        padding: 1rem;
+
+        p {
+            padding: 0.625rem;
+        }
+
+        .first {
+            background-color: black;
+            padding: 0.625rem;
+            color: #FBFBFB
+        }
+
+        footer {
+            background-color: black;
+            padding: 0.313rem;
+            height: 2.5rem;
+        }
 
         h1,
         h2,
@@ -121,29 +145,22 @@ main {
         h4,
         h5,
         h6 {
-            background: #ddc47d;
-            color     : white;
-            margin    : 0;
-            padding   : 1rem 0.5rem;
+        margin: 2rem 0;
         }
     }
 
 
-
 .it-spa {
     text-align: center;
+    justify-content: center;
 }
 
 .header-main {
     font-size: 3.125rem;
 }
 
-.fixed-bottom {
-    text-align: center;
-    height: 1.875rem;
-}
 
-.container {
+.content {
     margin: 0.75rem;
     padding: 0;
     .row {
@@ -153,33 +170,39 @@ main {
 
 .top-header {
     height: 3.75rem;
-    width: auto;
 }
 
-
 .bgcolor {
-    background-color: black;
-    border: black solid 1px;
+
+    border: black solid 0.063rem;
     margin: 0;
     .greeting {
-        background-color: #FBFBFB;
+        background: transparent;
         transition: 2s ease-in-out;
         &:hover {
             background-color: black;
             color: #FBFBFB;
         }
     }
+    .bg-pic {
+        background-image: url("./img/soap-3123465_1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        
+    }
 }
 
 .bg-black  {
     background-color: black;
     color: #FBFBFB;
+    width: auto;
 }
 
-.container {
+.content {
     .btn {
         &:hover {
-        text-decoration: underline;
+            text-decoration: underline;
         }
     }
 }
@@ -201,6 +224,9 @@ main {
     .top-header {
         height:auto;
     }
+    .bgcolor {
+        height: 5rem;
+    }
     }
 }
 
@@ -216,6 +242,47 @@ main {
     }
     .top-header {
         height: 1.875rem;
+    }
+    .bgcolor {
+        height: 10rem;
+    }
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        font-size: 1rem;
+        font-weight: 200;
+    .header-main {
+        font-size: 1.5rem;
+        }
+    .btn {
+        font-size: 1rem;
+    }
+    .top-header {
+        height: 1.875rem;
+    }
+    .bgcolor {
+        height: 15rem;
+    }
+    }
+}
+
+@media all and (min-width: 1200px) {
+    body {
+        font-size: 1rem;
+        font-weight: 200;
+    .header-main {
+        font-size: 1.5rem;
+        }
+    .btn {
+        font-size: 1rem;
+    }
+    .top-header {
+        height: 3.75rem;
+    }
+    .bgcolor {
+        height: 40rem;
     }
     }
 }

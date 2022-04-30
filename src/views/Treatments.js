@@ -17,7 +17,8 @@ export function Treatments() {
         const li = document.createElement("li");
         li.innerHTML = `
                     <h4>${treatment.name}</h4>
-                    <p>${treatment.price.toFixed(2)} PLN</p>
+                    <p>Cena: ${treatment.price.toFixed(2)} PLN</p>
+                    <p>Ocena gości: ${treatment.opinion} </p>
                     <footer></footer>
                 `;
 
@@ -39,6 +40,7 @@ export function Treatments() {
           },
         });
 
+        li.firstElementChild.setAttribute('class', 'first')
         li.lastElementChild.append(seeMoreButton, addToCartButton);
 
         return li;

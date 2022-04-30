@@ -1,8 +1,9 @@
+
 export function TreatmentDetails(id) {
   const section = document.createElement("section");
 
   section.innerHTML = `
-        <h2>Zabiegi</h2>
+        <h2>Zabieg</h2>
         <p>Loading...</p>
     `;
 
@@ -19,7 +20,10 @@ export function TreatmentDetails(id) {
                     <strong>Cena: ${treatment.price.toFixed(2)} PLN</strong>
                 </p>
                 <p>Ocena gości: ${treatment.opinion}</p>
+                <footer></footer>
             `;
+
+          article.firstElementChild.setAttribute('class', 'first')
 
       section.querySelector("p").remove();
       section.append(article);
