@@ -3,6 +3,7 @@ import { Rooms } from "../views/Rooms";
 import { Button } from "../common/Button";
 import { Cart } from "../views/Cart";
 import { Treatments } from "../views/Treatments";
+import { Staff } from "../views/Staff";
 
 const navigateTo = (component) => {
   const navigateEvent = new CustomEvent("navigate", {
@@ -16,6 +17,7 @@ const navItems = [
   { text: "Strona główna", component: Home },
   { text: "Pokoje", component: Rooms },
   { text: "Zabiegi", component: Treatments },
+  { text: "Pracownicy", component: Staff },
   { text: "Koszyk", component: Cart },
 ];
 

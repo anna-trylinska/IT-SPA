@@ -99,5 +99,27 @@
       "price": 120,
       "opinion": "★★★☆☆"
     }
+  ],
+  "staff": [
+    {
+      "name": "Monika Nowak",
+      "description": "Założycielka IT SPA - ulubionego spa programistów - posiada ogromne doświadczenie, które zdobywała przez lata pracując w różnych miejscach na całym świecie. Specjalizuje się we wszelkiej maści masażach, a jej masaż rozgrzanymi kamieniami podbija serca wszystkich klientów.",
+      "opinion": "★★★★★"
+    },
+    {
+      "name": "Kamil Kowalski",
+      "description": "Wieloletni pracownik spa, posiada niezwykłe umiejętności zarówno w zakresie masaży jak i peelingów, które wykorzystuje na codzień, by klienci spa mogli zapomnieć o stresie związanym  z codziennym życiem. Specjalizuje się przede wszystkim w masażach, ale i jego popisowy peeling czekoladowy zasługuje na specjalne wyróżnienie.",
+      "opinion": "★★★★★"
+    },
+    {
+      "name": "Agata Słowik",
+      "description": "Najnowszy nabytek naszego IT SPA :) Jej świeże spojrzenie i genialne pomysły zyskują rzesze nowych klientów. Jej autorska maseczka Espresso stała się ulubieńcem pracowników branży IT.",
+      "opinion": "★★★★★"
+    },
+    {
+      "name": "Żaneta Dudek",
+      "description": "Przez wiele lat podróżowała po świecie, gdzie poznała ogrom technik i nabyła doświadczenie jakiego niejeden może pozazdrościć. Specjalizuje się w swoich ulubionych zabiegach jakimi są manicure i pedicure.",
+      "opinion": "★★★★★"
+    }
   ]
 }

@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-image: linear-gradient(45deg, #fdfbfb, #ebedee);
+    background-image: linear-gradient(45deg, #fdfbfb, #ebedee) repeating-linear-gradient(45deg, #fdfbfb, #ebedee);
     font-family:  Montserrat, Helvetica, sans-serif;
     font-weight: 200;
     padding: 2rem;
@@ -16,7 +16,6 @@ body {
     justify-content: center;
     min-height: 100%;
 }
-
 
 nav {
 
@@ -98,7 +97,6 @@ main {
                 &>*+* {
                     margin-left: 1rem;
                 }
-
             }
 
             button,
@@ -129,14 +127,33 @@ main {
 
         .first {
             background-color: black;
+            font-size: 1.5rem;
             padding: 0.625rem;
             color: #FBFBFB
         }
 
         footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
             background-color: black;
             padding: 0.313rem;
-            height: 2.5rem;
+            
+
+            &>*+* {
+                margin-left: 1rem;
+            }
+
+        }
+
+        button,
+        .btn {
+            background: transparent;
+            color: #FBFBFB;
+            &:hover, :active {
+                background-color: #FBFBFB;
+                color: black;
+            }
         }
 
         h1,
@@ -145,7 +162,7 @@ main {
         h4,
         h5,
         h6 {
-        margin: 2rem 0;
+        margin: 2.25rem 0;
         }
     }
 
@@ -208,23 +225,52 @@ main {
     }
 }
 
+.welcome {
+    padding: 0.5rem;
+}
+
+.reserve {
+    background: transparent;
+    color: black;
+    box-shadow: none !important;
+    border: 0;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-weight: 100;
+    &:hover, :active {
+        text-decoration: underline;
+    }
+}
+
+.divider {
+    height: 0.5rem;
+}
+
+.footer-bottom {
+    height: 2rem;
+}
+
+.text {
+    text-align: justify;
+}
 
 @media all and (min-width: 320px) and (max-width: 576px) {
     body {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 100;
 
         h2 {
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
         h4 {
-            font-size: 0.625rem;
+            font-size: 1rem;
         }
-
     .header-main {
         font-size: 1.25rem;
-        }
-    .btn {
-        font-size: 0.5rem;
+    }
+    .btn, .reserve {
+        font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
     }
     nav {
@@ -236,26 +282,22 @@ main {
     .bgcolor {
         min-height: 10rem;
     }
+    .content {
+        .dates {
+        min-width: 80vw;
+        padding: 0.5rem;
+    }
+    }
     }
 }
 
 @media all and (min-width: 576px) {
     body {
-        font-size: 0.75rem;
-        font-weight: 100;
-
-        h2 {
-            font-size: 1.25rem;
-        }
-        h4 {
-            font-size: 1rem;
-        }
-        
     .header-main {
         font-size: 1.5rem;
         }
-    .btn {
-        font-size: 0.75rem;
+    .btn, .reserve {
+        font-size: 1rem;
     }
     .top-header {
         height: 1.875rem;
@@ -263,7 +305,13 @@ main {
     .bgcolor {
         min-height: 15rem;
     }
+    .content {
+        .dates {
+        min-width: 80vw;
+        padding: 0.5rem;
     }
+    }
+}
 }
 
 @media all and (min-width: 768px) {
@@ -281,7 +329,7 @@ main {
     .header-main {
         font-size: 1.875rem;
         }
-    .btn {
+    .btn, .reserve {
         font-size: 1rem;
     }
     .top-header {
@@ -289,6 +337,13 @@ main {
     }
     .bgcolor {
         min-height: 50vh;
+    }
+    .content {
+        justify-content: center;
+        .dates {
+        min-width: auto;
+        padding: 0.5rem;
+    }
     }
     }
 }
@@ -300,7 +355,7 @@ main {
     .header-main {
         font-size: 2rem;
         }
-    .btn {
+    .btn, .reserve {
         font-size: 1rem;
     }
     .top-header {
@@ -319,7 +374,7 @@ main {
     .header-main {
         font-size: 2.5rem;
         }
-    .btn {
+    .btn, .reserve {
         font-size: 1rem;
     }
     .top-header {
@@ -327,3 +382,4 @@ main {
     }
     }
 }
+

@@ -23,7 +23,8 @@ export function Calendar() {
   nextYear = yyyy1 + "-" + mm + "-" + dd;
 
   section.innerHTML = `
-    <div class='welcome'>Zarezerwuj pobyt w IT SPA już dziś!</div>
+    <div class='welcome'>Nasze SPA to ulubione miejsce wszystkich programistów!</div>
+    <div class='welcome'>Zarezerwuj pobyt w IT SPA już dzisiaj i odetchnij!</div>
     <div class='row'>
         <div class='col-6 d-flex justify-content-center align-items-center'>
             <label for="dateOfArrival">Data przyjazdu: </label>
@@ -33,9 +34,24 @@ export function Calendar() {
             <label for="dateOfDeparture">Data wyjazdu: </label>
             <input type="date" id="dateOfDeparture" class="datefield" onkeydown="return false" min="${today}"; max="${nextYear}">
         </div>
-    </div>
+    </>
     `;
-  section.setAttribute("class", "content");
+
+  const ReserveButton = Button({
+    text: "Zarezerwuj już dziś!",
+    callback: () => {
+      const arrival = new Date(document.getElementById("dateOfArrival").value);
+      const departure = new Date(
+        document.getElementById("dateOfDeparture").value
+      );
+      if (departure <= arrival) {
+        alert("Data wyjazdu nie może być wcześniejsza niż data przyjazdu!");
+      }
+    },
+  });
+
+  const section2 = document.createElement("section");
+  section2.innerHTML = `<div class="divider"></div>`;
 
   const RoomButton = Button({
     text: "Zobacz dostępne pokoje",
@@ -59,7 +75,10 @@ export function Calendar() {
     },
   });
 
-  section.append(RoomButton, TreatmentButton);
+  section.setAttribute("class", "content");
+  section.append(ReserveButton);
+  section.append(section2);
+  section2.append(RoomButton, TreatmentButton);
 
   return section;
 }

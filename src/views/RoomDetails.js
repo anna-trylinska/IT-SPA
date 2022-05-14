@@ -1,3 +1,6 @@
+import { Button } from "../common/Button";
+import { Rooms } from "./Rooms";
+
 export function RoomDetails(id) {
   const section = document.createElement("section");
 
@@ -12,7 +15,7 @@ export function RoomDetails(id) {
       const article = document.createElement("article");
 
       article.innerHTML = `
-                <h3>${room.name}</h3>
+                <h4>${room.name}</h4>
                 <p>Łóżka: ${room.beds}</p>
                 <p>Goście: ${room.guests}</p>
                 <p>
@@ -22,7 +25,19 @@ export function RoomDetails(id) {
                 <footer></footer>
             `;
 
+            const RoomButton = Button({
+              text: "Wstecz",
+              callback: () => {
+                const navigateEvent = new CustomEvent("navigate", {
+                  detail: () => Rooms(),
+                });
+    
+                document.body.dispatchEvent(navigateEvent);
+              },
+            });
+      
       article.firstElementChild.setAttribute("class", "first");
+      article.lastElementChild.append(RoomButton);
 
       section.querySelector("p").remove();
       section.append(article);
